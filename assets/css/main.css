@@ -11,13 +11,9 @@ body {
 	padding-top: 10em;
 }
 
-.search {
-	width: 100%;
-	padding: 4px;
-	font-size: 1.2em;
-	color: #171717;
-	outline: 0;
-	border: none;
+.content-food {
+	padding-top: 1em;
+	padding-bottom: 0.3em;
 }
 
 .cat-hide {
@@ -29,15 +25,17 @@ body {
 }
 
 .title-overlay {
-  width: 100%;
-  height: 100%;
+  width: 92%;
+  height: auto;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
   background-color: #000;
   color: #FFF;
   text-align: center;
   z-index: 1;
-  opacity: 0.5;
-  position: relative;
-  top: -5em;
+  opacity: .6;
+  position: absolute;
+  top: 8em;
 }
 
 /* Loader */

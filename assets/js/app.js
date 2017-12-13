@@ -20,7 +20,7 @@ $(document).ready(function () {
 		success: function(restaurants) {
 			console.log('success', restaurants);
 			$.each(restaurants['restaurants'], function(i, restaurant) {
-				$('#locals').append('<div class="col-xs-6 content-food" data-toggle="modal" data-target="#modal_'+countID+'"><h4 class="title">' +restaurant.restaurant.name + '</h4>' + '<img src="'+restaurant.restaurant.featured_image+'" class="img-responsive" id="img_'+ countID +'"><div class="title-overlay" id="hover_'+countID+'" style="display:none"><p>'+restaurant.restaurant.name+'</p></div><div class="cat-hide">'+restaurant.restaurant.cuisines +'</div></div>');
+				$('#locals').append('<div class="col-xs-6 content-food" data-toggle="modal" data-target="#modal_'+countID+'"><h4 class="title visible-xs hidden-md hidden-lg">' +restaurant.restaurant.name + '</h4>' + '<img src="'+restaurant.restaurant.featured_image+'" class="img-responsive" id="img_'+ countID +'"><div class="title-overlay" id="hover_'+countID+'" style="display:none"><p>'+restaurant.restaurant.name+'</p></div><div class="cat-hide">'+restaurant.restaurant.cuisines +'</div></div>');
 
 				$('#modal-container').append('<!-- Modal --> <div class="modal fade" id="modal_'+countID+'" role="dialog"><div class="modal-dialog">' + 
 					'<!-- Modal content-->' + 
@@ -41,7 +41,9 @@ $(document).ready(function () {
 				var hoverID = $(this).index();
 				console.log(hoverID);
     		$('#hover_'+hoverID).show();
-			}).on('mouseout focus', function () {
+			});
+			$('.content-food').on('mouseout', function () {
+				var hoverID = $(this).index();
     		$('#hover_'+hoverID).hide();
 			});
 		},
