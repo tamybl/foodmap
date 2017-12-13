@@ -21,25 +21,19 @@ $(document).ready(function () {
 			console.log('success', restaurants);
 			$.each(restaurants['restaurants'], function(i, restaurant) {
 				$('#locals').append('<div class="col-xs-6 content-food"><h4 class="title">' +restaurant.restaurant.name + '</h4>' + '<img src="'+restaurant.restaurant.featured_image+'" class="img-responsive" id="img_'+ countID++ +'"><div class="cat">'+restaurant.restaurant.cuisines +'</div></div>');
-				// Para agregar todas las categorias de comida
-				/*$('#categories').append('<option>'+restaurant.restaurant.cuisines+'</option>');*/
 
 			});
-			/*$('#search').keyup(function () {
-				var keyword = $(this).val();
-				$('.content-food').hide();
-			}); */
-			/*$('.content-food').mouseenter(function () {
-				var idPic = $(this).index();*/
+
 			$('#categories').change(function () {
 				var keyword = $(this).val();
 				$('.content-food').hide();
 				/* :contains revisa si existe coincidencia filtrando
-				* por el keyword
+				* por el keyword y mostrando el resultado.
 				*/
-				$(".content-food:contains('" + keyword + "')").css("display","block");
+				$(".content-food:contains('" + keyword + "')").show();
 				
-				
+				/*$('.content-food').mouseenter(function () {
+				var idPic = $(this).index();*/
 			});	
 		},
 	});	
