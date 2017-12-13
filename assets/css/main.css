@@ -20,8 +20,12 @@ body {
 	border: none;
 }
 
-.cat {
+.cat-hide {
 	display: none;
+}
+
+.modal {
+	color: #2d2d2d;
 }
 
 /* Loader */
