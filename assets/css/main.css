@@ -20,6 +20,10 @@ body {
 	border: none;
 }
 
+.cat {
+	display: none;
+}
+
 /* Loader */
 .loader {
 	margin-right: auto;

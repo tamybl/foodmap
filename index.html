@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-	<header>
+	<main>
 		<div class="container">
 
 			<!-- Page 0 -->
@@ -29,8 +29,16 @@
 				</div>
 				<div class="col-xs-12">
 					<h3 class="color-base text-center">Comida cerca de ti</h3>
-					<input type="search" class="search" placeholder="Comida mexicana">
-				<div id="list">
+					<select class="form-control" id="categories">
+  					<option value="">Elige una Categoria</option>
+  					<option value="Italian">Italian Food</option>
+  					<option value="Sandwich">Sandwich</option>
+  					<option value="Cafe">Cafe</option>
+  					<option value="Pizza">Pizza</option>
+  					<option value="Asian">Asian Food</option>
+
+					</select>
+				<div id="locals" class="row">
 					
 				</div>
 				</div>
@@ -39,7 +47,7 @@
 
 		</div>
 		</div>
-	</header>
+	</main>
 	<script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/js/app.js"></script>
 </body>
